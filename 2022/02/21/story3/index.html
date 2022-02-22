@@ -10,7 +10,55 @@
 </head>
     <body class="is-preload">
         <!-- //内容模板 -->
+        <article class="wrapper style1 align-left">
+ <div class="inner">
+   <div class="header">
+     <h1 class="title">story3</h1>
+     <div class="stuff">
+       <span>二月 21, 2022</span>
+       <span>字数 0</span>
+       <span>评论 <span id="valine-count"></span></span>
+       <span id="busuanzi_container_site_pv">阅读 <span id="busuanzi_value_site_pv"></span></span>
+     </div>
+   </div>
+   
+   <div class="tags">
+        <span>标签:</span>
         
+          </div>
+   <hr>
+   <div class="post-nav">
+    
+    <div class="post-nav-prev post-nav-item">
+        <a href="/2022/02/21/story4/" >story4<i class="fa fa-chevron-left"></i></a>
+    </div>
+    
+    
+    <div class="post-nav-next post-nav-item">
+        <a href="/2022/02/21/story2/" >story2<i class="fa fa-chevron-right"></i></a>
+    </div>
+    
+ </div>
+
+   <!-- valine评论 -->
+   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+   <script src='//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js'></script>
+   <div id="vcomments"></div>
+   <script>
+     var valine = new Valine();
+     valine.init({
+       el: '#vcomments',
+       appId: '9NLlhswsmeN37FKVRBeSXgfw-gzGzoHsz',
+       appKey: 'wSbwpK7D032N1ADGhJGU7FN7'
+     })
+     valine.Q(location.pathname.replace(/index\.html?$/, '')).count().then(num => {
+       document.getElementById("valine-count").innerHTML = num;
+     })
+   </script>
+ </div>
+</article> 
+
+<!-- {post: page}表示把page变量存到post中传递给了article -->
         <!-- //尾部模板 -->
         <footer class="wrapper style1 align-center">
     <div class="inner">
